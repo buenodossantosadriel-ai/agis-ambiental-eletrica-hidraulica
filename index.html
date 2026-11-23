@@ -36,6 +36,18 @@ footer{background:#06244b;color:#b9cce0;padding:23px 0;font-size:.82rem}.footer-
 .hydro-dots button{width:9px;height:9px;border:0;border-radius:99px;padding:0;background:rgba(255,255,255,.6);cursor:pointer}
 .hydro-dots button.active{width:28px;background:var(--yellow)}
 @media(max-width:520px){.hydro-gallery{padding:56px 0}.hydro-slide{height:390px}.hydro-caption{bottom:58px}.hydro-caption h3{font-size:1.45rem}}
+
+/* Ajustes de legibilidade e composição do carrossel hidráulico */
+.hydro-slide{display:grid;grid-template-columns:1.08fr .92fr;height:clamp(310px,42vw,470px);background:#092f63}
+.hydro-slide:after{display:none}
+.hydro-slide img{width:100%;height:100%;min-height:0;object-fit:cover}
+.hydro-caption{position:relative;inset:auto;align-self:center;max-width:none;padding:34px clamp(22px,3.5vw,44px);color:#fff}
+.hydro-caption small{color:#ffdf56}
+.hydro-caption h3{color:#fff}
+.hydro-caption p{color:#e7f0fb}
+.hydro-caption a{display:inline-block;color:#ffdf56;margin-top:10px}
+.hydro-carousel{background:#092f63}
+@media(max-width:700px){.hydro-slide{height:auto;min-height:0;grid-template-columns:1fr}.hydro-slide img{height:225px;min-height:225px}.hydro-caption{padding:22px 22px 58px}.hydro-caption h3{font-size:1.45rem}.hydro-dots{bottom:17px}}
 </style>
 </head>
 <body>
@@ -71,12 +83,56 @@ footer{background:#06244b;color:#b9cce0;padding:23px 0;font-size:.82rem}.footer-
 <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z"/><path d="M9 15c.5 1.5 1.5 2 3 2"/></svg></div><h3>Serviços ambientais</h3><p>Soluções e serviços ambientais conforme a necessidade de cada projeto e escopo contratado.</p></article>
 <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 13h6M9 16h6"/></svg></div><h3>Soluções para obras</h3><p>Apoio em instalações e adequações prediais, com avaliação das necessidades de cada ambiente.</p></article>
 </div></div></section>
-<section class="feature" id="bombas"><div class="container feature-layout"><div><div class="section-kicker">Automação hidráulica</div><h2>Comando automático para sistemas de duas bombas</h2><p>Montagem e adequação de quadros de comando para transferência de água do reservatório inferior para o superior, com controle automático e proteções dimensionadas para os motores.</p><div class="feature-list"><div><span class="check">✓</span> Alternância entre bomba 1 e bomba 2</div><div><span class="check">✓</span> Controle por boias ou sensores de nível</div><div><span class="check">✓</span> Comando manual e automático</div><div><span class="check">✓</span> Proteção contra sobrecarga</div><div><span class="check">✓</span> Proteção contra falta de água</div><div><span class="check">✓</span> Sinalização e identificação</div><div><span class="check">✓</span> Bomba reserva, quando prevista</div><div><span class="check">✓</span> Instalação e manutenção</div></div><a class="btn btn-blue" href="https://wa.me/5566999992279?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20quadro%20de%20comando%20para%20duas%20bombas." target="_blank" rel="noopener">Consultar sistema de bombeamento ↗</a></div><div class="pump-visual"><div class="pum<section class="hydro-gallery" id="galeria-hidraulica"><div class="container"><div class="hydro-head"><div class="section-kicker">Instalações hidráulicas</div><h2 class="section-title">Trabalhos hidráulicos em imagens reais</h2><p class="section-lead">Exemplos fotográficos de profissionais executando instalações, montagem de tubulações e manutenção hidráulica.</p></div><div class="hydro-carousel" aria-label="Carrossel de exemplos fotográficos de trabalhos hidráulicos"><div class="hydro-track" id="hydroTrack">
+<section class="feature" id="bombas">
+<div class="container feature-layout">
+<div>
+<div class="section-kicker">Automação hidráulica</div>
+<h2>Comando automático para sistemas de duas bombas</h2>
+<p>Montagem e adequação de quadros de comando para transferência de água do reservatório inferior para o superior, com controle automático e proteções dimensionadas para os motores.</p>
+<div class="feature-list">
+<div><span class="check">✓</span> Alternância entre bomba 1 e bomba 2</div>
+<div><span class="check">✓</span> Controle por boias ou sensores de nível</div>
+<div><span class="check">✓</span> Comando manual e automático</div>
+<div><span class="check">✓</span> Proteção contra sobrecarga</div>
+<div><span class="check">✓</span> Proteção contra falta de água</div>
+<div><span class="check">✓</span> Sinalização e identificação</div>
+<div><span class="check">✓</span> Bomba reserva, quando prevista</div>
+<div><span class="check">✓</span> Instalação e manutenção</div>
+</div>
+<a class="btn btn-blue" href="https://wa.me/5566999992279?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20quadro%20de%20comando%20para%20duas%20bombas." target="_blank" rel="noopener">Consultar sistema de bombeamento ↗</a>
+</div>
+<div class="pump-visual">
+<div class="pump-top">SISTEMA DE ABASTECIMENTO</div>
+<div class="tank-diagram">
+<div class="tank"><span>RESERVATÓRIO<br>INFERIOR</span></div>
+<div class="pipes">⇢</div>
+<div class="tank"><span>RESERVATÓRIO<br>SUPERIOR</span></div>
+</div>
+<div class="pump-bottom">Quadro de comando • Alternância • Sensores de nível • Proteção dos motores</div>
+</div>
+</div>
+</section>
+<section class="hydro-gallery" id="galeria-hidraulica">
+<div class="container">
+<div class="hydro-head">
+<div class="section-kicker">Instalações hidráulicas</div>
+<h2 class="section-title">Trabalhos hidráulicos em imagens reais</h2>
+<p class="section-lead">Exemplos fotográficos de profissionais executando instalações, montagem de tubulações e manutenção hidráulica.</p>
+</div>
+<div class="hydro-carousel" aria-label="Carrossel de exemplos fotográficos de trabalhos hidráulicos">
+<div class="hydro-track" id="hydroTrack">
 <article class="hydro-slide"><img src="https://eymentesisat.com.tr/uploads/images/hizmetler/bursa-temiz-su-tesisati.webp" alt="Profissional instalando tubulações azuis e conexões de distribuição de água" loading="lazy"><div class="hydro-caption"><small>Instalação de água</small><h3>Montagem de redes e conexões hidráulicas</h3><p>Exemplo de instalação de tubulações, registros e conjunto de distribuição.</p><a href="https://www.eymentesisat.com.tr/" target="_blank" rel="noopener">Crédito da imagem: Eymen Tesisat ↗</a></div></article>
 <article class="hydro-slide"><img src="https://img.m-kogyo.co.jp/columns/piping-construction-schedule-body2.jpg" alt="Encanador trabalhando em conexões de tubulação durante uma obra" loading="lazy"><div class="hydro-caption"><small>Execução em obra</small><h3>Montagem e ajuste de tubulações</h3><p>Exemplo de profissional realizando conexões e ajustes em uma instalação predial.</p><a href="https://www.m-kogyo.co.jp/columns/piping-construction-schedule" target="_blank" rel="noopener">Crédito da imagem: Mori Kogyo ↗</a></div></article>
 <article class="hydro-slide"><img src="https://images.squarespace-cdn.com/content/v1/67ed3c6d703c452326847eea/439b1292-bb53-4cde-9b87-467be84b9e2e/new-construction-plumbing-scaled.jpeg" alt="Trabalhador instalando tubulação hidráulica em estrutura de construção residencial" loading="lazy"><div class="hydro-caption"><small>Infraestrutura predial</small><h3>Instalação hidráulica em construção</h3><p>Exemplo de tubulações de alimentação e conexões durante a etapa de obra.</p><a href="https://www.plumberforhiresbc.com/new-construction-plumbing" target="_blank" rel="noopener">Crédito da imagem: Plumber for Hire ↗</a></div></article>
 <article class="hydro-slide"><img src="https://lirp.cdn-website.com/15bd0c76/dms3rep/multi/opt/commercial%2Bplumbing%2Bservices%2Bin%2Bcalhoun%2Bga-1920w.jpeg" alt="Técnico trabalhando em tubulações hidráulicas em ambiente comercial" loading="lazy"><div class="hydro-caption"><small>Serviços comerciais</small><h3>Manutenção de redes hidráulicas</h3><p>Exemplo de serviço em tubulações e conexões de uma instalação comercial.</p><a href="https://www.weaverplumbingga.com/when-should-you-call-a-commercial-plumbing-company" target="_blank" rel="noopener">Crédito da imagem: Weaver Plumbing ↗</a></div></article>
-</div><button class="carousel-arrow prev" type="button" id="hydroPrev" aria-label="Imagem hidráulica anterior">‹</button><button class="carousel-arrow next" type="button" id="hydroNext" aria-label="Próxima imagem hidráulica">›</button><div class="hydro-dots"><button class="active" type="button" data-hydro-slide="0" aria-label="Mostrar imagem 1"></button><button type="button" data-hydro-slide="1" aria-label="Mostrar imagem 2"></button><button type="button" data-hydro-slide="2" aria-label="Mostrar imagem 3"></button><button type="button" data-hydro-slide="3" aria-label="Mostrar imagem 4"></button></div></div><p class="hydro-note">Imagens reais de referência, provenientes dos sites indicados nos créditos. São exemplos ilustrativos de serviços hidráulicos e não representam obras executadas pela AGIS.</p></div></section>p-top">SISTEMA DE ABASTECIMENTO</div><div class="tank-diagram"><div class="tank"><span>RESERVATÓRIO<br>INFERIOR</span></div><div class="pipes">⇢</div><div class="tank"><span>RESERVATÓRIO<br>SUPERIOR</span></div></div><div class="pump-bottom">Quadro de comando • Alternância • Sensores de nível • Proteção dos motores</div></div></div></section>
+</div>
+<button class="carousel-arrow prev" type="button" id="hydroPrev" aria-label="Imagem hidráulica anterior">‹</button>
+<button class="carousel-arrow next" type="button" id="hydroNext" aria-label="Próxima imagem hidráulica">›</button>
+<div class="hydro-dots"><button class="active" type="button" data-hydro-slide="0" aria-label="Mostrar imagem 1"></button><button type="button" data-hydro-slide="1" aria-label="Mostrar imagem 2"></button><button type="button" data-hydro-slide="2" aria-label="Mostrar imagem 3"></button><button type="button" data-hydro-slide="3" aria-label="Mostrar imagem 4"></button></div>
+</div>
+<p class="hydro-note">Imagens de referência provenientes dos sites indicados nos créditos. São exemplos ilustrativos e não representam obras executadas pela AGIS.</p>
+</div>
+</section>
 <section class="ozone-section" id="ozonio"><div class="container"><div class="ozone-heading"><div class="section-kicker">Solução ambiental</div><h2 class="section-title">Geradores de ozônio para descontaminação de resíduos de agrotóxicos</h2><p class="section-lead">Soluções com geradores de ozônio voltadas à aplicação em processos de descontaminação de resíduos de agrotóxicos, conforme avaliação técnica de cada situação.</p></div><div class="pump-visual" style="max-width:760px;min-height:210px;margin:0 auto 24px"><div class="pump-top">TECNOLOGIA DE OZONIZAÇÃO</div><div style="font-size:clamp(1.2rem,3vw,1.8rem);font-weight:850;line-height:1.2;position:relative;z-index:1">Geradores de ozônio aplicados à descontaminação</div><div class="pump-bottom">Aplicação definida conforme o tipo de resíduo e as condições do processo.</div></div><p class="ozone-disclaimer">A eficiência depende do tipo de agrotóxico, da concentração e das condições de aplicação. A viabilidade deve ser avaliada caso a caso; não há garantia de remoção total de resíduos.</p><div class="ozone-cta"><a class="btn btn-blue" href="https://wa.me/5566999992279?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20geradores%20de%20oz%C3%B4nio%20para%20descontamina%C3%A7%C3%A3o%20de%20res%C3%ADduos%20de%20agrot%C3%B3xicos." target="_blank" rel="noopener">Consultar sobre geradores de ozônio ↗</a></div></div></section><section class="portfolio" id="portfolio"><div class="container"><div class="portfolio-head"><div class="section-kicker">Nosso trabalho</div><h2 class="section-title">Experiência prática e soluções bem executadas</h2><p class="section-lead">Conheça um pouco da rotina de trabalho e de um dos tipos de sistemas que a AGIS executa e mantém.</p></div><div class="work-carousel" aria-label="Carrossel de fotos dos trabalhos da AGIS">
 <div class="work-track" id="workTrack">
 <article class="work-slide"><img src="assets/agis-equipe.jpg" alt="Profissional equipado em ambiente de trabalho, com ferramentas e materiais de instalação" loading="lazy"><div class="work-overlay"><span class="work-tag">ROTINA DE CAMPO</span><h3>Instalações e serviços prediais</h3><p>Atuação técnica, organização e atenção à segurança em cada etapa.</p></div></article>
